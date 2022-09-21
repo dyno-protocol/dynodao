@@ -1,1 +1,1 @@
-# OceansDAO
+# OceansDAO-frontend
