@@ -235,7 +235,7 @@ function Home() {
           The Digital Currency
         </div>
         <div className="contentStyle">
-          For DynoDAO
+          For DynoChain
         </div>
         <div className="fxBetween2 mgTop">
           <div className="fxColumn2">
