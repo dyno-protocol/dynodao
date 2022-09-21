@@ -1,17 +1,26 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import "./nft.scss";
-import styled from "styled-components";
-import NFTIcon1 from '../../assets/nft/1@2x.png'
-import NFTIcon2 from '../../assets/nft/2@2x.png'
-import NFTIcon3 from '../../assets/nft/3@2x.png'
-import NFTIcon4 from '../../assets/nft/4@2x.png'
-import NFTIcon5 from '../../assets/nft/5@2x.png'
-import NFTIcon6 from '../../assets/nft/6@2x.png'
-import GiftImg from '../../assets/nft/liwu.png'
-import TopImg from '../../assets/nft/1234.png'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper'
-import 'swiper/swiper.min.css'
+import './nft.scss';
+import 'swiper/swiper.min.css';
+
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
+
+import styled from 'styled-components';
+import SwiperCore, { Pagination } from 'swiper';
+
+import TopImg from '../../assets/nft/1234.png';
+import NFTIcon1 from '../../assets/nft/1@2x.png';
+import NFTIcon2 from '../../assets/nft/2@2x.png';
+import NFTIcon3 from '../../assets/nft/3@2x.png';
+import NFTIcon4 from '../../assets/nft/4@2x.png';
+import NFTIcon5 from '../../assets/nft/5@2x.png';
+import NFTIcon6 from '../../assets/nft/6@2x.png';
+import GiftImg from '../../assets/nft/liwu.png';
+
 SwiperCore.use([Pagination])
 
 export const NFTBySymbol = {
@@ -111,10 +120,10 @@ const NFTPage = () => {
       <div className="maxTopBox">
         <div className="TopBox">
           <div className="titleBox">
-            OceansNFT
+            DynoNFT
           </div>
           <div className="textBox">
-            OceansNFT is an important part of the OceansDAO ecosystem. Holders can obtain OceansNFT Collections by staking WAVE. In the near future, OceansNFT will be widely used in OceansDAO's protocol governance and community activities, becoming a status symbol of OceansNFT holders in the OceansDAO ecosystem.
+            DynoNFT is an important part of the DynoDAO ecosystem. Holders can obtain DynoNFT Collections by staking WAVE. In the near future, DynoNFT will be widely used in DynoDAO's protocol governance and community activities, becoming a status symbol of DynoNFT holders in the DynoDAO ecosystem.
           </div>
         </div>
         <div>
@@ -132,10 +141,10 @@ const NFTPage = () => {
         </div>
         <div className="TopBox">
           <div className="titleBox">
-            OceansNFT
+            DynoNFT
           </div>
           <div className="textBox">
-            OceansNFT is an important part of the OceansDAO ecosystem. Holders can obtain OceansNFT Collections by staking WAVE. In the near future, OceansNFT will be widely used in OceansDAO's protocol governance and community activities, becoming a status symbol of OceansNFT holders in the OceansDAO ecosystem.
+            DynoNFT is an important part of the DynoDAO ecosystem. Holders can obtain DynoNFT Collections by staking WAVE. In the near future, DynoNFT will be widely used in DynoDAO's protocol governance and community activities, becoming a status symbol of DynoNFT holders in the DynoDAO ecosystem.
           </div>
         </div>
       </div>

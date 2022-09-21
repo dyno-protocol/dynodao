@@ -1,35 +1,47 @@
-import { useDispatch, useSelector } from "react-redux";
-import { Paper, Grid, Typography, Box, Zoom, Button } from "@material-ui/core";
-import { formatCurrency, getDisplayBalance, trim } from "../../helpers";
-import { useEffect, useCallback, useMemo } from "react";
-import { useWeb3Context } from "src/hooks/web3Context";
-import "./home.scss";
-import { Skeleton } from "@material-ui/lab";
-import Logoimg from "../../assets/ohm/logo@2x.png";
-import Coin from "../../assets/ohm/coin.svg";
-import { Link } from "react-router-dom";
-import TimeCountdown from "src/components/TimeCountdown";
-import img1_1 from "../../assets/ohm/1-1.png";
-import img1_2 from "../../assets/ohm/1-2.png";
-import img1_3 from "../../assets/ohm/1-3.png";
-import img1_4 from "../../assets/ohm/1-4.png";
-import CaiDan from "../../assets/ohm/tuozhuaicaidandaohang.png";
-import { useState } from "react";
-import { SvgIcon } from "@material-ui/core";
-import { ReactComponent as GitHub } from "../../assets/icons/github.svg";
-import { ReactComponent as Medium } from "../../assets/icons/medium.svg";
-import { ReactComponent as Twitter } from "../../assets/icons/twitter.svg";
-import { ReactComponent as Discord } from "../../assets/icons/discord.svg";
-import medium from "../../assets/ohm/med@2x.png";
-import { FixedFormat } from "@ethersproject/bignumber";
-import styled from "styled-components";
-import PdImg from "../../assets/ohm/SEA.svg";
-import WuImg from "../../assets/ohm/WAVE.svg";
-import DiscordImg from "../../assets/ohm/discord.png";
-import GuanImg from "../../assets/ohm/copy-2-3@3x.png";
-import { shorten } from "../../helpers";
-import { isPendingTxn, txnButtonText } from "src/slices/PendingTxnsSlice";
-import { changeApproval, changeStake } from "../../slices/IdoThunk";
+import './home.scss';
+
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
+
+import {
+  useDispatch,
+  useSelector,
+} from 'react-redux';
+import { useWeb3Context } from 'src/hooks/web3Context';
+import {
+  isPendingTxn,
+  txnButtonText,
+} from 'src/slices/PendingTxnsSlice';
+import styled from 'styled-components';
+
+import { Button } from '@material-ui/core';
+import { Skeleton } from '@material-ui/lab';
+
+import img1_1 from '../../assets/ohm/1-1.png';
+import img1_2 from '../../assets/ohm/1-2.png';
+import img1_4 from '../../assets/ohm/1-4.png';
+import Coin from '../../assets/ohm/coin.svg';
+import GuanImg from '../../assets/ohm/copy-2-3@3x.png';
+import DiscordImg from '../../assets/ohm/discord.png';
+import Logoimg from '../../assets/ohm/logo@2x.png';
+import medium from '../../assets/ohm/med@2x.png';
+import PdImg from '../../assets/ohm/SEA.svg';
+import CaiDan from '../../assets/ohm/tuozhuaicaidandaohang.png';
+import WuImg from '../../assets/ohm/WAVE.svg';
+import {
+  formatCurrency,
+  getDisplayBalance,
+  shorten,
+  trim,
+} from '../../helpers';
+import {
+  changeApproval,
+  changeStake,
+} from '../../slices/IdoThunk';
 
 function Home() {
   const { provider, address, connected, connect, chainID, disconnect } =
@@ -223,7 +235,7 @@ function Home() {
           The Digital Currency
         </div>
         <div className="contentStyle">
-          For OceansDAO
+          For DynoDAO
         </div>
         <div className="fxBetween2 mgTop">
           <div className="fxColumn2">
@@ -266,30 +278,30 @@ function Home() {
       {/* 底部链接栏 */}
       <div className="bottomBor a">
         <a
-          href="https://twitter.com/oceansdao"
+          href="https://twitter.com/dyno_chain"
           target="_blank"
           className="bottomImgs a2"
         >
           <img src={img1_1} alt="" className="bottomImgs2" />
         </a>
         <a
-          href="https://github.com/oceansdao"
+          href="https://github.com/dyno-protocol"
           target="_blank"
           className="bottomImgs a2"
         >
           <img src={img1_2} alt="" className="bottomImgs2" />
         </a>
         <a
-          href="https://medium.com/@oceansdao"
+          href="https://dynochain.medium.com"
           target="_blank"
           className="bottomImgs a2"
         >
           <img src={medium} alt="" className="bottomImgs2" />
         </a>
-        <a href="https://t.me/oceansdao" target="_blank" className="bottomImgs a">
+        <a href="https://t.me/dynochain" target="_blank" className="bottomImgs a">
           <img src={img1_4} alt="" className="bottomImgs2" />
         </a>
-        <a href="https://discord.com/invite/oceansdao" target="_blank" className="bottomImgs a">
+        <a href="https://discord.gg/WC5thfjRDt" target="_blank" className="bottomImgs a">
           <img src={DiscordImg} alt="" className="bottomImgs2" />
         </a>
       </div>
@@ -429,7 +441,7 @@ function Inp_Box({ idoBalance, busdAmount }) {
         />
       </div>
       <div className="Content_Box3">
-        OceansDAO project will launch on 12:00 8th July. 2022, you will be able to
+        DynoDAO project will launch on 12:00 8th July. 2022, you will be able to
         claim your SEA token manually on the website.
       </div>
 

@@ -1,1 +1,1 @@
-# OceansDAO-frontend
+# DynoDAO-frontend

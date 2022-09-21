@@ -1,14 +1,29 @@
-import { useState, useEffect, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { useWeb3Context } from "../../hooks";
-import { awardProcess, getRNGStatus, getPoolValues } from "../../slices/PoolThunk";
+import {
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
-import { Paper, Box, Typography, Button } from "@material-ui/core";
-import { Skeleton } from "@material-ui/lab";
+import {
+  useDispatch,
+  useSelector,
+} from 'react-redux';
+import { subtractDates } from 'src/helpers';
 
-import { trim, subtractDates } from "src/helpers";
-import TuImg from '../../assets/sea.png'
-import Tu2Img from '../../assets/wave.png'
+import {
+  Box,
+  Paper,
+  Typography,
+} from '@material-ui/core';
+
+import TuImg from '../../assets/sea.png';
+import Tu2Img from '../../assets/wave.png';
+import { useWeb3Context } from '../../hooks';
+import {
+  awardProcess,
+  getPoolValues,
+  getRNGStatus,
+} from '../../slices/PoolThunk';
 
 export const PoolPrize = () => {
   const { provider, chainID } = useWeb3Context();
@@ -126,7 +141,7 @@ export const PoolPrize = () => {
 
           </div>
           <Typography variant="h6">
-            3,3 π is the staking reward pool in the OceansDAO ecosystem, similar to the Syrup Pool of PancakeSwap. By staking your WAVE with OceansDAO, you will receive token rewards from the partners.
+            3,3 π is the staking reward pool in the DynoDAO ecosystem, similar to the Syrup Pool of PancakeSwap. By staking your WAVE with DynoDAO, you will receive token rewards from the partners.
           </Typography>
           {/* {poolIsLocked ? (
             <Typography variant="h6">Prize is being awarded</Typography>

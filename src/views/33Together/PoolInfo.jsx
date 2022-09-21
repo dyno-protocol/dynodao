@@ -1,13 +1,25 @@
-import { useState, useEffect } from "react";
-import { Box, Button, Divider, Paper, SvgIcon, Typography, Zoom } from "@material-ui/core";
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import PropTypes from "prop-types";
-import { Skeleton } from "@material-ui/lab";
+import {
+  useEffect,
+  useState,
+} from 'react';
 
-import { ReactComponent as ArrowUp } from "../../assets/icons/arrow-up.svg";
-import { useWeb3Context } from "../../hooks";
-import { poolTogetherUILinks } from "../../helpers/33Together";
+import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+
+import {
+  Box,
+  Button,
+  Divider,
+  Paper,
+  SvgIcon,
+  Typography,
+  Zoom,
+} from '@material-ui/core';
+import { Skeleton } from '@material-ui/lab';
+
+import { ReactComponent as ArrowUp } from '../../assets/icons/arrow-up.svg';
+import { poolTogetherUILinks } from '../../helpers/33Together';
+import { useWeb3Context } from '../../hooks';
 
 export const PoolInfo = props => {
   const [poolLoadedCount, setPoolLoadedCount] = useState(0);
@@ -43,11 +55,11 @@ export const PoolInfo = props => {
             <Box display="flex" flexDirection="column" className="user-pool-data">
               <div className="data-row">
                 <Typography>Your total awards</Typography>
-                <Typography>{props.isAccountLoading ? <Skeleton width={100} /> : props.yourTotalAwards} Oceans</Typography>
+                <Typography>{props.isAccountLoading ? <Skeleton width={100} /> : props.yourTotalAwards} Dyno</Typography>
               </div>
               <div className="data-row">
                 <Typography>Your pool deposits</Typography>
-                <Typography>{props.isAccountLoading ? <Skeleton width={100} /> : props.poolBalance} Oceans</Typography>
+                <Typography>{props.isAccountLoading ? <Skeleton width={100} /> : props.poolBalance} Dyno</Typography>
               </div>
               <div className="data-row">
                 <Typography>Your odds</Typography>
