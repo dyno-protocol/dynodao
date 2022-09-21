@@ -197,7 +197,7 @@ function Stake() {
                   <Link
                     className="migrate-sohm-button"
                     style={{ textDecoration: "none" }}
-                    href="https://docs.oceansdao.finance/"
+                    href="https://docs.dynodao.io/"
                     aria-label="migrate-sohm"
                     target="_blank"
                   >

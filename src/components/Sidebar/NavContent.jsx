@@ -92,7 +92,7 @@ function NavContent() {
       >
         <div className="dapp-menu-top">
           <Box className="branding-header">
-            <Link href="https://oceansdao.finance" target="_blank">
+            <Link href="https://dynodao.io" target="_blank">
               {/* <SvgIcon
                 color="primary"
                 component={OlympusIcon}
