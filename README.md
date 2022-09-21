@@ -1,2 +1,1 @@
-# dynodao
-DAO for DynoChain
+# OceansDAO
